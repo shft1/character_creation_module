@@ -1,6 +1,7 @@
+'''
 # Тестовые данные.
 TEST_DATA: list[tuple[int, str, bool]] = [
-    (44, 'success', True),
+    (43, 'success', True),
     (16, 'failure', True),
     (4, 'success', False),
     (21, 'failure', False),
@@ -39,3 +40,26 @@ def main(duel_res: list[tuple[int, str, bool]]) -> str:
 
 # Тестовый вызов функции main.
 print(main(TEST_DATA))
+'''
+from math import sqrt
+
+message = ('Добро пожаловать в самую лучшую программу для вычисления'
+           ' квадратного корня из заданного числа')
+
+print(message)
+
+
+def calculate_square_root(number):
+    """Вычисляет квадратный корень."""
+    return sqrt(number)
+
+
+def calc(your_number):
+    """Проверяет и выводит результат."""
+    if your_number >= 0:
+        res = calculate_square_root(your_number)
+        print(f'Мы вычислили квадратный корень из '
+              f'введённого вами числа. Это будет: {res}')
+
+
+calc(25.5)
